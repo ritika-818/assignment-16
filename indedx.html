@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/737d33ad0a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="outer-div">
+        <div id="input-container">
+            <input type="text" id="inp">
+        </div>
+        <button id="add-btn">ADD</button>
+    </div>
+    <script>
+        function addBtn(){
+            const inp = document.getElementById("inp");
+            const inputContainer = document.getElementById("input-container");
+            const value = inp.value.trim();
+
+            if (value) {
+                const tag = document.createElement("div");
+                tag.className = "chip";
+                tag.innerHTML = `${value} <span class="remove"><i class="fa-regular fa-circle-xmark"></i></span>`;
+
+                tag.querySelector(".remove").addEventListener("click", () => {
+                    inputContainer.removeChild(tag);
+                });
+
+                inputContainer.insertBefore(tag, inp);
+                inp.value = '';
+                inp.focus();
+            }
+        }
+        
+        const add = document.getElementById("add-btn");
+        add.addEventListener("click",addBtn);
+    </script>
+</body>
+</html>
