@@ -1,0 +1,10 @@
+#dropdown {
+  width: 170px;
+  text-align: center;
+}
+#dropdown .dropdown-div {
+  width: 100%;
+  background-color: whitesmoke;
+  border-bottom: 1px solid grey;
+  height: 40px;
+}/*# sourceMappingURL=index.css.map */

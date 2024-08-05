@@ -24,11 +24,9 @@
                 const tag = document.createElement("div");
                 tag.className = "chip";
                 tag.innerHTML = `${value} <span class="remove"><i class="fa-regular fa-circle-xmark"></i></span>`;
-
                 tag.querySelector(".remove").addEventListener("click", () => {
                     inputContainer.removeChild(tag);
                 });
-
                 inputContainer.insertBefore(tag, inp);
                 inp.value = '';
                 inp.focus();
