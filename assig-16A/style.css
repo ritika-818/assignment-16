@@ -1,10 +1,16 @@
-.outer-div {
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+body .outer-div {
   height: auto;
   display: flex;
   justify-content: center;
   gap: 10px;
 }
-.outer-div #input-container {
+body .outer-div #input-container {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -14,25 +20,25 @@
   border-radius: 5px;
   min-height: 40px;
 }
-.outer-div #input-container .chip {
+body .outer-div #input-container .chip {
   display: flex;
   align-items: center;
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
   border-radius: 15px;
   padding: 5px 10px;
   font-size: 14px;
   color: #333;
 }
-.outer-div #input-container .chip .remove {
+body .outer-div #input-container .chip .remove {
   margin-left: 5px;
   cursor: pointer;
 }
-.outer-div #input-container #inp {
+body .outer-div #input-container #inp {
   border: none;
   outline: none;
   flex-grow: 1;
 }
-.outer-div #add-btn {
+body .outer-div #add-btn {
   background-color: rgb(66, 66, 254);
   border: none;
   height: 50px;

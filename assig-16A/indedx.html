@@ -14,13 +14,21 @@
         </div>
         <button id="add-btn">ADD</button>
     </div>
+    <div id="outer"></div>
     <script>
         function addBtn(){
             const inp = document.getElementById("inp");
             const inputContainer = document.getElementById("input-container");
             const value = inp.value.trim();
-
-            if (value) {
+            const error = document.createElement("div");
+            error.classList.add('error');
+            inp.addEventListener('focus',()=>outer.textContent='');
+            if(value === ""){
+                error.textContent = "Can't add empty value";
+                const outer = document.getElementById('outer');
+                outer.appendChild(error);
+                return;
+            } else if (value) {
                 const tag = document.createElement("div");
                 tag.className = "chip";
                 tag.innerHTML = `${value} <span class="remove"><i class="fa-regular fa-circle-xmark"></i></span>`;
@@ -32,7 +40,6 @@
                 inp.focus();
             }
         }
-        
         const add = document.getElementById("add-btn");
         add.addEventListener("click",addBtn);
     </script>
