@@ -1,0 +1,34 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+body .form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .form-container .form {
+  padding: 20px;
+  background-color: pink;
+  width: 500px;
+  height: 400px;
+}
+body .form-container .form button {
+  width: 100px;
+  height: 50px;
+  background-color: rgb(106, 106, 253);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: large;
+}
+body .generate-form {
+  width: 100px;
+  height: 50px;
+  background-color: rgb(106, 106, 253);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}/*# sourceMappingURL=index.css.map */

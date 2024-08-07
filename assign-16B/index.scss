@@ -1,11 +1,24 @@
-
-#dropdown {
-  width: 170px;
-  text-align: center;
-  & .dropdown-div{
-    width: 100%;
-    background-color: whitesmoke;
-    border-bottom: 1px solid grey;
+body {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  #inp {
+    width: 400px;
     height: 40px;
+    border: 2px solid black;
+    font-size: large;
+  }
+  #dropdown {
+    & .dropdown-div {
+      width: 400px;
+      background-color: whitesmoke;
+      border-bottom: 1px solid grey;
+      display: flex;
+      padding: 10px;
+      justify-content: center;
+      flex-direction: column;
+      height: 20px;
+    }
   }
 }
